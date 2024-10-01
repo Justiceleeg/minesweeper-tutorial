@@ -89,7 +89,6 @@ func on_cell_clicked(cell_coord: Vector2i) -> void:
 	
 	handle_cells(cell_coord)
 
-
 func handle_cells(cell_coord: Vector2i, cells_checked_recursively: Array[Vector2i] = []) -> void:
 	var tile_data = get_cell_tile_data(cell_coord)
 	var atlas_coord = get_cell_atlas_coords(cell_coord)
@@ -150,7 +149,6 @@ func lose(cell_coord: Vector2i) -> void:
 	set_tile_cell(cell_coord, "MINE_RED")
 
 func place_flag(cell_coord: Vector2i) -> void:
-	var tile_data = get_cell_tile_data(cell_coord)
 	var atlas_coord = get_cell_atlas_coords(cell_coord)
 	var is_empty_cell = atlas_coord == CELLS["DEFAULT"]
 	var is_flag_cell = atlas_coord == CELLS["FLAG"]
